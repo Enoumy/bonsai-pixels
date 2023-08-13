@@ -1,0 +1,15 @@
+(executable
+ (name main)
+ (modes js)
+ (preprocess
+  (pps ppx_jane ppx_typed_fields bonsai.ppx_bonsai ppx_css))
+ (libraries
+  core
+  bonsai.web
+  bonsai.kado
+  bonsai.web_ui_form
+  bonsai.vdom_node_with_map_children))
+
+(alias
+ (name DEFAULT)
+ (deps ./index.html))
